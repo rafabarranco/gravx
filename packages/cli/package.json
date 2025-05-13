@@ -2,6 +2,10 @@
   "name": "gravx",
   "version": "0.0.12",
   "description": "CLI to create hexagonal projects for React",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafabarranco/gravx"
+  },
   "main": "./dist/bin/index.js",
   "bin": {
     "gravx": "./dist/bin/index.js"
