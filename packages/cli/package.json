@@ -1,0 +1,43 @@
+{
+  "name": "gravx",
+  "version": "0.0.12",
+  "description": "CLI to create hexagonal projects for React",
+  "main": "./dist/bin/index.js",
+  "bin": {
+    "gravx": "./dist/bin/index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "cli",
+    "hexagonal",
+    "frontend",
+    "generator",
+    "architecture",
+    "react"
+  ],
+  "author": "BarVe",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.17",
+    "typescript": "^5.2.0"
+  },
+  "files": [
+    "dist",
+    "gravx-template",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module"
+}
