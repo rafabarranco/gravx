@@ -1,5 +1,4 @@
-import React from "react";
+import { FC } from "react";
+import { IButtonProps } from "./types";
 
-export const Button = ({ children }: { children: React.ReactNode }) => {
-  return <button className="p-2 bg-blue-600 text-white rounded">{children}</button>;
-};
+export const Button: FC<IButtonProps> = ({ children, ...props }) => <button className="p-2 bg-blue-600 text-white rounded" {...props}>{children}</button>;

@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "name": "template",
+      "path": "packages/cli/gravx-template"
+    },
+
+    {
+      "name": "cli",
+      "path": "packages/cli"
+    },
+    {
+      "name": "ui",
+      "path": "packages/ui"
+    }
+  ],
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always"
+    },
+    "prettier.requireConfig": true
+  }
+}

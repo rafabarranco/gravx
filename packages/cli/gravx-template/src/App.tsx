@@ -1,12 +1,7 @@
-import { Button } from '@gravx/ui'; // Componente de ejemplo de tu framework UI
+import type { FC } from 'react';
 
-const App = () => {
-  return (
-    <div>
-      <h1>Welcome to the Gravx React App!</h1>
-      <Button>Click me!</Button>
-    </div>
-  );
-};
+import Task from './entities/Task';
+
+const App: FC = () => <Task />;
 
 export default App;
