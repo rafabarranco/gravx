@@ -13,10 +13,6 @@
     "packages/cli/gravx-template/**/*.{ts,tsx}": [
       "npm --workspace packages/cli/gravx-template run lint",
       "npm --workspace packages/cli/gravx-template run format"
-    ],
-    "packages/ui/**/*.{ts,tsx}": [
-      "npm --workspace packages/ui run lint",
-      "npm --workspace packages/ui run format"
     ]
   },
   "devDependencies": {

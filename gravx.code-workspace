@@ -1,14 +1,13 @@
 {
   "folders": [
     {
-      "name": "root",
-      "path": "."
-    },
-    {
       "name": "template",
       "path": "packages/cli/gravx-template"
     },
-
+    {
+      "name": "core",
+      "path": "packages/core"
+    },
     {
       "name": "cli",
       "path": "packages/cli"
@@ -16,7 +15,11 @@
     {
       "name": "ui",
       "path": "packages/ui"
-    }
+    },
+    {
+      "name": "root",
+      "path": "."
+    },
   ],
   "settings": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",

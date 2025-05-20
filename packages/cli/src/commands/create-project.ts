@@ -34,7 +34,7 @@ export async function createProject(projectName: string): Promise<void> {
     execSync("git init", { cwd: targetDir, stdio: "inherit" });
     console.log(chalk.green("\Git repository created!\n"));
     console.log(chalk.green("\Preparing husky...\n"));
-    execSync("npm run prepare", { cwd: targetDir, stdio: "inherit" });
+    execSync("npx husky init .husky/pre-commit 'npx lint-staged'", { cwd: targetDir, stdio: "inherit" });
     console.log(chalk.green("\Husky prepared!\n"));
     console.log(chalk.green("\nUpdating pre-commit file...\n"));
     const huskyPreCommitPath = path.join(targetDir, ".husky", "pre-commit");
