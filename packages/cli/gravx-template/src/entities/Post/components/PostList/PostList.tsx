@@ -1,12 +1,12 @@
 import { useCallback, type FC } from 'react';
-import { Link } from 'react-router-dom';
 import { useView } from '@gravx/core';
 
 import type { IPost } from '../../types';
+import PostListItem from './components/PostListItem/PostListItem';
 
 const BASE_API_URL = 'https://jsonplaceholder.typicode.com/';
 
-const List: FC = () => {
+const PostList: FC = () => {
   const { data: posts, error, loading } = useView<IPost[]>({ url: `${BASE_API_URL}posts` });
 
   const renderPosts = useCallback(
@@ -14,9 +14,9 @@ const List: FC = () => {
       posts &&
       posts.length > 0 && (
         <ul>
-          {posts.map(({ id, title }) => (
-            <li key={id}>
-              <Link to={`/post/${id}`}>{title}</Link>
+          {posts.map(post => (
+            <li key={post.id}>
+              <PostListItem post={post} />
             </li>
           ))}
         </ul>
@@ -33,4 +33,4 @@ const List: FC = () => {
   return renderPosts();
 };
 
-export default List;
+export default PostList;

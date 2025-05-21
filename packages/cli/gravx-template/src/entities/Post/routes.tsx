@@ -1,7 +1,7 @@
-import Post from './screen';
+import Post from './Post';
 
-import List from './components/List/screen';
-import View from './components/View/screen';
+import PostList from './components/PostList/PostList';
+import PostView from './components/PostView/PostView';
 
 const postRoutes = [
   {
@@ -10,11 +10,15 @@ const postRoutes = [
     children: [
       {
         index: true,
-        element: <List />,
+        element: <PostList />,
       },
       {
         path: ':id',
-        element: <View />,
+        element: <PostView />,
+      },
+      {
+        path: 'edit/:id',
+        element: <PostView isEditing />,
       },
     ],
   },

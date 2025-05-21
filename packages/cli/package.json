@@ -1,6 +1,6 @@
 {
   "name": "gravx",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "CLI to create hexagonal projects for React",
   "repository": {
     "type": "git",
