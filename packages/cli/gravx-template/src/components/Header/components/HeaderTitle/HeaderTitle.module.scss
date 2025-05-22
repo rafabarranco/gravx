@@ -1,0 +1,19 @@
+.HeaderTitleGradient {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: $bold;
+  font-size: text($text-h1, font-size);
+  position: relative;
+  display: inline-block;
+}
+
+.HeaderTitleGradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 8px rgba(0, 112, 243, 0.1));
+  border-radius: $radius-sm;
+}

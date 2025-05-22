@@ -7,14 +7,71 @@ $color-border: #1c1f2a; // gris azulado opaco
 $color-muted: #5a5f72; // gris espacial neutro
 $color-text: #d4d7e5; // texto claro sobre fondo negro
 $color-heading: #ffffff; // encabezados en blanco puro
+$color-white: #ffffff; // color blanco puro
+$color-black: #000000; // color negro puro
 
 $color-success: #16a34a; // verde equilibrado
 $color-error: #dc2626; // rojo denso
 $color-warning: #eab308; // amarillo gravedad
 $color-info: #2563eb; // azul profundo informativo
 
+// Modo claro
+$color-light-background: #ffffff; // fondo blanco
+$color-light-surface: #f5f7fa; // superficie clara
+$color-light-primary: #3b49df; // azul gravitacional adaptado
+$color-light-secondary: #b983f0; // púrpura claro
+$color-light-accent: #00c4e0; // cian brillante suave
+$color-light-border: #d1d5db; // gris claro
+$color-light-muted: #6b7280; // gris medio
+$color-light-text: #1f2937; // texto oscuro
+$color-light-heading: #111827; // encabezados en negro
+$color-light-white: #ffffff; // color blanco puro
+$color-light-black: #000000; // color negro puro
+
+$color-light-success: #15803d; // verde equilibrado oscuro
+$color-light-error: #b91c1c; // rojo intenso
+$color-light-warning: #ca8a04; // amarillo cálido
+$color-light-info: #1d4ed8; // azul informativo fuerte
+
 @use 'sass:color';
 
 @function color-scale($color, $args...) {
   @return color.scale($color, $args...);
+}
+
+:root,
+[data-theme='dark'] {
+  --color-background: #{$color-background};
+  --color-surface: #{$color-surface};
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+  --color-border: #{$color-border};
+  --color-muted: #{$color-muted};
+  --color-text: #{$color-text};
+  --color-heading: #{$color-heading};
+  --color-success: #{$color-success};
+  --color-error: #{$color-error};
+  --color-warning: #{$color-warning};
+  --color-info: #{$color-info};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+}
+
+[data-theme='light'] {
+  --color-background: #{$color-light-background};
+  --color-surface: #{$color-light-surface};
+  --color-primary: #{$color-light-primary};
+  --color-secondary: #{$color-light-secondary};
+  --color-accent: #{$color-light-accent};
+  --color-border: #{$color-light-border};
+  --color-muted: #{$color-light-muted};
+  --color-text: #{$color-light-text};
+  --color-heading: #{$color-light-heading};
+  --color-success: #{$color-light-success};
+  --color-error: #{$color-light-error};
+  --color-warning: #{$color-light-warning};
+  --color-info: #{$color-light-info};
+  --color-white: #{$color-light-black};
+  --color-black: #{$color-light-white};
 }

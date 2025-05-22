@@ -1,3 +1,8 @@
-$transition-fast: 150ms ease-in-out;
-$transition-normal: 300ms ease;
-$transition-slow: 500ms ease-out;
+$transition-fast: 0.2s;
+$transition-normal: 0.5s;
+$transition-slow: 1s;
+
+$ease-in-out: ease-in-out;
+$ease-in: ease-in;
+$ease-out: ease-out;
+$ease-linear: linear;

@@ -1,0 +1,245 @@
+.Welcome {
+  display: flex;
+  flex-grow: 1;
+  min-height: $height-half-vh;
+  align-items: $items-center;
+  justify-content: $justify-center;
+  background: var(--color-background);
+  transition: background $transition-normal;
+  width: $width-full;
+}
+
+.Cards {
+  display: flex;
+  gap: spacing(10);
+  flex-wrap: $wrap;
+  justify-content: $justify-center;
+  width: $width-full;
+  max-width: $max-width-container;
+}
+
+.WelcomeCard {
+  display: flex;
+  flex-direction: $flex-column;
+  justify-content: $justify-center;
+}
+
+.Divider {
+  width: 1px;
+  background: var(--color-text);
+  opacity: 0.15;
+  margin: 0 spacing(2);
+}
+
+.Glass {
+  border-radius: spacing(4);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  padding: spacing(6) spacing(4);
+  width: $width-full;
+  text-align: center;
+  transition:
+    background $transition-normal,
+    border $transition-normal;
+  flex: 1 1 $width-md;
+
+  li {
+    text-align: left;
+  }
+}
+
+.Title {
+  font-size: text($text-h3, font-size);
+  font-weight: text($text-h3, font-weight);
+  color: var(--color-heading);
+  margin-bottom: spacing(1);
+  letter-spacing: $letter-spacing-wide;
+  transition: color $transition-normal;
+  white-space: $nowrap;
+
+  span {
+    color: var(--color-primary);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.Subtitle {
+  color: var(--color-text);
+  font-size: text($text-body-sm, font-size);
+  margin-bottom: spacing(4);
+  line-height: $line-height-relaxed;
+  transition: color $transition-normal;
+  text-align: left;
+}
+
+.Actions {
+  display: flex;
+  gap: spacing(4);
+  justify-content: $justify-center;
+  flex-wrap: $wrap;
+  margin-bottom: $spacing05;
+}
+
+.Button {
+  position: relative;
+  color: var(--color-black);
+  padding: spacing(2) spacing(5);
+  border-radius: $radius-lg;
+  font-weight: $semi-bold;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  font-size: $size08;
+  background: transparent;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    z-index: $z-index-negative;
+    transition: opacity $transition-fast $ease-linear;
+    opacity: 1;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &:hover {
+    color: var(--color-white);
+  }
+}
+
+.ButtonAlt {
+  background: transparent;
+  color: var(--color-primary);
+  padding: spacing(2) spacing(5);
+  border-radius: $radius-lg;
+  font-weight: $semi-bold;
+  text-decoration: none;
+  border: 1px solid var(--color-primary);
+  transition:
+    background $transition-slow,
+    color $transition-slow,
+    border $transition-slow;
+  cursor: pointer;
+  font-size: $size08;
+
+  &:hover {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border-color: var(--color-primary);
+    box-shadow: $shadow-sm;
+  }
+}
+
+.CodeWrapper {
+  display: flex;
+  align-items: $items-center;
+  justify-content: $justify-center;
+  font-family: $font-monospace;
+  font-size: $size08;
+  color: var(--color-text);
+  margin-top: spacing(3);
+  transition:
+    background $transition-slow,
+    border $transition-slow;
+  overflow: hidden;
+}
+
+.Code {
+  display: flex;
+  align-items: $items-center;
+  margin-right: spacing(2);
+  white-space: $nowrap;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-sm;
+  padding: spacing(1) spacing(2);
+  gap: spacing(2);
+  cursor: pointer;
+  transition: background-color $transition-fast $ease-linear;
+
+  &:hover {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    color: var(--color-black);
+  }
+}
+
+.PricingForm {
+  display: flex;
+  gap: spacing(2);
+  margin-top: spacing(4);
+  align-items: $items-center;
+  justify-content: $justify-center;
+}
+
+.PricingInput {
+  flex: 1;
+  position: relative;
+  font-size: text($text-body, font-size);
+  color: var(--color-text);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--color-border);
+  padding: spacing(1) spacing(2);
+  transition: border-color $transition-fast $ease-linear;
+
+  &::placeholder {
+    color: var(--color-text);
+    opacity: 0.5;
+    transition:
+      opacity $transition-fast $ease-linear,
+      transform $transition-fast $ease-linear;
+    transform-origin: left bottom;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom-color: var(--color-primary);
+    border-bottom-width: 3px;
+  }
+}
+
+.PricingButton {
+  padding: spacing(2) spacing(5);
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-weight: $semi-bold;
+  font-size: text($text-body, font-size);
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    box-shadow $transition-fast $ease-linear,
+    color $transition-fast $ease-linear,
+    background $transition-fast $ease-linear;
+
+  &:hover {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    color: var(--color-white);
+    box-shadow: $shadow-sm;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Cards {
+    flex-direction: $flex-column;
+    align-items: $items-center;
+  }
+
+  .Divider {
+    display: none;
+  }
+}

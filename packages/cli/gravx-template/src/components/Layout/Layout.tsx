@@ -6,7 +6,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 
 const Layout: FC = () => (
-  <div className={styles.Layout}>
+  <div className={styles.Layout} role="presentation">
     <Header />
     <Main />
     <Footer />

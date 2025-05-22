@@ -25,9 +25,18 @@ const PostList: FC = () => {
     () =>
       posts &&
       posts.length > 0 && (
-        <div className={styles.PostList}>
+        <div className={styles.PostList} role="list" aria-label="Post list">
           {posts.map(post => (
-            <div key={post.id} role="button" onClick={() => handleOnClick(post.id)}>
+            <div
+              key={post.id}
+              role="button"
+              tabIndex={0}
+              aria-label={`View post ${post.title}`}
+              onClick={() => handleOnClick(post.id)}
+              onKeyPress={e => {
+                if (e.key === 'Enter' || e.key === ' ') handleOnClick(post.id);
+              }}
+            >
               <PostListItem post={post} />
             </div>
           ))}
@@ -36,11 +45,21 @@ const PostList: FC = () => {
     [handleOnClick, posts],
   );
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div role="status" aria-live="polite">
+        Loading...
+      </div>
+    );
 
   if (error) return <></>;
 
-  if (!posts || posts?.length < 1) return <div>No posts found</div>;
+  if (!posts || posts?.length < 1)
+    return (
+      <div role="status" aria-live="polite">
+        No posts found
+      </div>
+    );
 
   return renderPosts();
 };

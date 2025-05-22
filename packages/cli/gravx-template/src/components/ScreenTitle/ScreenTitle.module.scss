@@ -1,0 +1,6 @@
+.ScreenTitle {
+  color: var(--color-heading);
+  font-size: text($text-h3, font-size);
+  font-weight: text($text-h3, font-weight);
+  letter-spacing: text($text-h3, letter-spacing);
+}

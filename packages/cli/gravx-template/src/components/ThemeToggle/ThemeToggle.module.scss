@@ -1,0 +1,36 @@
+.ThemeToggle {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+
+  .IconDefault,
+  .IconHover {
+    transition: opacity $transition-fast $ease-linear;
+    position: absolute;
+    left: $width-half;
+    top: $width-half;
+    transform: translate(-50%, -50%);
+    font-size: $size12;
+  }
+
+  .IconDefault {
+    opacity: 1;
+  }
+
+  .IconHover {
+    opacity: 0;
+  }
+
+  &:hover {
+    .IconDefault {
+      opacity: 0;
+    }
+
+    .IconHover {
+      opacity: 1;
+    }
+  }
+}

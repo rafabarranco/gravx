@@ -1,13 +1,11 @@
 .Main {
-  flex: 1 1 auto;
+  flex-direction: $flex-column;
+  flex-grow: 1;
   overflow-y: auto;
   min-height: $height-none;
   box-sizing: border-box;
-
-  padding: spacing(4) spacing(6);
-  background-color: $color-background;
-  color: $color-text;
-  font-family: $font-primary;
+  background-color: var(--color-background);
+  color: var(--color-text);
   font-size: text($text-body, font-size);
   font-weight: text($text-body, font-weight);
   letter-spacing: text($text-body, letter-spacing);

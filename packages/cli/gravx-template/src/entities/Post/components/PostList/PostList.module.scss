@@ -3,6 +3,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: $flex-column;
   gap: spacing(2);
 }

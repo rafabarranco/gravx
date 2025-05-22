@@ -3,12 +3,30 @@
   padding: spacing(3) spacing(4);
   box-shadow: $shadow-sm;
   backdrop-filter: saturate(140%) blur(4px);
-  background-color: $color-surface;
-  color: $color-muted;
-  font-family: $font-primary;
+  background-color: var(--color-surface);
+  color: var(--color-muted);
   font-size: text($text-caption, font-size);
-  font-weight: 300;
+  font-weight: $light;
   letter-spacing: text($text-caption, letter-spacing);
   text-align: center;
   user-select: none;
+}
+
+.GradientText {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: $semi-bold;
+  position: relative;
+  display: inline-block;
+}
+
+.GradientText::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 8px rgba(0, 112, 243, 0.1));
+  border-radius: $radius-sm;
 }
