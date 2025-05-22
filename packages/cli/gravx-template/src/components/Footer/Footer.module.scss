@@ -1,0 +1,14 @@
+.Footer {
+  flex-shrink: $layout-flex-shrink-footer;
+  padding: spacing(3) spacing(4);
+  box-shadow: $shadow-sm;
+  backdrop-filter: saturate(140%) blur(4px);
+  background-color: $color-surface;
+  color: $color-muted;
+  font-family: $font-primary;
+  font-size: text($text-caption, font-size);
+  font-weight: 300;
+  letter-spacing: text($text-caption, letter-spacing);
+  text-align: center;
+  user-select: none;
+}

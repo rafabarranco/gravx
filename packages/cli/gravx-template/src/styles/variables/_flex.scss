@@ -1,0 +1,37 @@
+@use './spacing' as *;
+
+// direction
+$flex-row: row;
+$flex-column: column;
+$flex-row-reverse: row-reverse;
+$flex-column-reverse: column-reverse;
+
+// flex-shrink
+$layout-flex-shrink-header: 0;
+$layout-flex-shrink-footer: 0;
+
+// justify-content
+$justify-start: flex-start;
+$justify-center: center;
+$justify-end: flex-end;
+$justify-between: space-between;
+$justify-around: space-around;
+$justify-evenly: space-evenly;
+
+// align-items
+$items-start: flex-start;
+$items-center: center;
+$items-end: flex-end;
+$items-stretch: stretch;
+$items-baseline: baseline;
+
+// flex-wrap
+$wrap: wrap;
+$nowrap: nowrap;
+$wrap-reverse: wrap-reverse;
+
+// gap (con tu spacing)
+$gap-xs: $spacing02;
+$gap-sm: $spacing04;
+$gap-md: $spacing06;
+$gap-lg: $spacing08;

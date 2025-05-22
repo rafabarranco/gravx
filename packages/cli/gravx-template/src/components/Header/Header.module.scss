@@ -1,0 +1,14 @@
+.Header {
+  flex-shrink: $layout-flex-shrink-header;
+  padding: spacing(3) spacing(6);
+  box-shadow: $shadow-sm;
+  backdrop-filter: saturate(160%) blur(6px);
+  background-color: $color-surface;
+  border-bottom: 1px solid $color-border;
+  color: $color-heading;
+  font-family: $font-primary;
+  font-size: text($text-h3, font-size);
+  font-weight: text($text-h3, font-weight);
+  letter-spacing: text($text-h3, letter-spacing);
+  user-select: none;
+}

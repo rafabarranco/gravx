@@ -1,0 +1,15 @@
+.PostListItem {
+  padding: spacing(2);
+  background-color: transparent;
+  color: $color-text;
+  font-family: $font-primary;
+  font-size: text($text-body, font-size);
+  font-weight: text($text-body, font-weight);
+  letter-spacing: text($text-body, letter-spacing);
+  line-height: $line-height-normal;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: color-scale($color-surface, $lightness: 4%);
+  }
+}

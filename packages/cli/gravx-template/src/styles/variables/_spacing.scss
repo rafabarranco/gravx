@@ -1,0 +1,77 @@
+@use 'sass:map';
+
+// Base spacing unit
+$spacing-unit: 4px;
+
+// Spacing scale
+$spacing00: 0;
+
+$spacing01: $spacing-unit * 1; // 4px
+$spacing02: $spacing-unit * 2; // 8px
+$spacing03: $spacing-unit * 3; // 12px
+$spacing04: $spacing-unit * 4; // 16px
+
+$spacing05: $spacing-unit * 5; // 20px
+$spacing06: $spacing-unit * 6; // 24px
+$spacing07: $spacing-unit * 7; // 28px
+$spacing08: $spacing-unit * 8; // 32px
+
+$spacing09: $spacing-unit * 9; // 36px
+$spacing10: $spacing-unit * 10; // 40px
+$spacing11: $spacing-unit * 11; // 44px
+$spacing12: $spacing-unit * 12; // 48px
+
+$spacing13: $spacing-unit * 13; // 52px
+$spacing14: $spacing-unit * 14; // 56px
+$spacing15: $spacing-unit * 15; // 60px
+$spacing16: $spacing-unit * 16; // 64px
+
+$spacing17: $spacing-unit * 17; // 68px
+$spacing18: $spacing-unit * 18; // 72px
+$spacing19: $spacing-unit * 19; // 76px
+$spacing20: $spacing-unit * 20; // 80px
+
+// Negative spacing
+$spacing-n01: -$spacing01;
+$spacing-n02: -$spacing02;
+$spacing-n03: -$spacing03;
+$spacing-n04: -$spacing04;
+$spacing-n05: -$spacing05;
+
+// Fractional spacing
+$spacing-half: $spacing-unit * 0.5; // 2px
+$spacing-quarter: $spacing-unit * 0.25; // 1px
+
+// Spacing scale map
+$spacing-scale: (
+  0: $spacing00,
+  1: $spacing01,
+  2: $spacing02,
+  3: $spacing03,
+  4: $spacing04,
+  5: $spacing05,
+  6: $spacing06,
+  7: $spacing07,
+  8: $spacing08,
+  9: $spacing09,
+  10: $spacing10,
+  11: $spacing11,
+  12: $spacing12,
+  13: $spacing13,
+  14: $spacing14,
+  15: $spacing15,
+  16: $spacing16,
+  17: $spacing17,
+  18: $spacing18,
+  19: $spacing19,
+  20: $spacing20,
+);
+
+// Semantic spacing
+$spacing-section: $spacing08; // 32px
+$spacing-block: $spacing04; // 16px
+$spacing-inline: $spacing02; // 8px
+
+@function spacing($key) {
+  @return map.get($spacing-scale, $key);
+}

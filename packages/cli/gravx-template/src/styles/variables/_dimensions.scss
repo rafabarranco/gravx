@@ -1,0 +1,41 @@
+// Base units para width/height (en px o rem)
+$size-unit-px: 4px;
+$size-unit-rem: 0.25rem; // 4px si la raíz es 16px
+
+// Anchuras fijas comunes
+$width-xs: 64px; // 4 * 16
+$width-sm: 128px; // 8 * 16
+$width-md: 256px; // 16 * 16
+$width-lg: 512px; // 32 * 16
+$width-xl: 1024px; // 64 * 16
+
+// Alturas fijas comunes
+$height-none: 0;
+$height-xs: 64px;
+$height-sm: 128px;
+$height-md: 256px;
+$height-lg: 512px;
+$height-xl: 1024px;
+
+// Anchuras y alturas porcentuales comunes
+$width-full: 100%;
+$width-half: 50%;
+$width-third: 33.3333%;
+$width-quarter: 25%;
+$width-none: 0;
+
+$height-full: 100%;
+$height-half: 50%;
+
+// Max-width y max-height
+$max-width-container: 1200px;
+$max-height-container: 800px;
+
+// Min-width y min-height
+$min-width-button: 120px;
+$min-height-button: 40px;
+
+// Tamaños específicos (ejemplos para botones, inputs, etc.)
+$size-button-height: 40px;
+$size-button-padding-horizontal: 16px;
+$size-input-height: 36px;

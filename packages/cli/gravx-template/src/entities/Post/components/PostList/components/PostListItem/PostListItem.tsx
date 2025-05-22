@@ -1,10 +1,11 @@
 import type { FC } from 'react';
-import { Link } from 'react-router-dom';
 
 import type { IPostListItemProps } from './types';
 
+import styles from './PostlistItem.module.scss';
+
 const PostListItem: FC<IPostListItemProps> = ({ post }) => (
-  <Link to={`/post/${post.id}`}>{post.title}</Link>
+  <div className={styles.PostListItem}>{post.title}</div>
 );
 
 export default PostListItem;

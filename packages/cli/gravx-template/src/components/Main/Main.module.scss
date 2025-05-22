@@ -1,0 +1,15 @@
+.Main {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: $height-none;
+  box-sizing: border-box;
+
+  padding: spacing(4) spacing(6);
+  background-color: $color-background;
+  color: $color-text;
+  font-family: $font-primary;
+  font-size: text($text-body, font-size);
+  font-weight: text($text-body, font-weight);
+  letter-spacing: text($text-body, letter-spacing);
+  line-height: $line-height-normal;
+}

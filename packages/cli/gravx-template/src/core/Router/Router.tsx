@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Layout from '../../containers/Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 
 import postRoutes from '../../entities/Post/routes';
 
@@ -11,4 +11,5 @@ const router = createBrowserRouter([
     children: [...postRoutes],
   },
 ]);
+
 export default router;

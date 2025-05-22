@@ -1,27 +1,39 @@
-import { useCallback, type FC } from 'react';
+import { useCallback, useMemo, type FC } from 'react';
 import { useView } from '@gravx/core';
 
-import type { IPost } from '../../types';
 import PostListItem from './components/PostListItem/PostListItem';
 
-const BASE_API_URL = 'https://jsonplaceholder.typicode.com/';
+import type { IPost } from '../../types';
+
+import styles from './PostList.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const PostList: FC = () => {
-  const { data: posts, error, loading } = useView<IPost[]>({ url: `${BASE_API_URL}posts` });
+  const navigate = useNavigate();
+  const baseAPIUrl = useMemo(() => 'https://jsonplaceholder.typicode.com/', []);
+
+  const { data: posts, error, loading } = useView<IPost[]>({ url: `${baseAPIUrl}posts` });
+
+  const handleOnClick = useCallback(
+    (postId: number) => {
+      navigate(`/post/${postId}`);
+    },
+    [navigate],
+  );
 
   const renderPosts = useCallback(
     () =>
       posts &&
       posts.length > 0 && (
-        <ul>
+        <div className={styles.PostList}>
           {posts.map(post => (
-            <li key={post.id}>
+            <div key={post.id} role="button" onClick={() => handleOnClick(post.id)}>
               <PostListItem post={post} />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       ),
-    [posts],
+    [handleOnClick, posts],
   );
 
   if (loading) return <div>Loading...</div>;

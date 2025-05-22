@@ -1,0 +1,107 @@
+@use 'sass:map';
+
+/*
+  * size
+*/
+$size00: 0;
+$size01: 4px;
+$size02: 8px;
+$size03: 12px;
+$size04: 16px;
+$size05: 20px;
+$size06: 24px;
+$size07: 28px;
+$size08: 32px;
+$size09: 36px;
+$size10: 40px;
+$size11: 44px;
+$size12: 48px;
+$size13: 52px;
+$size14: 56px;
+$size15: 60px;
+$size16: 64px;
+$size17: 68px;
+$size18: 72px;
+$size19: 76px;
+$size20: 80px;
+
+/*
+  * weight
+*/
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+/*
+  * font-family
+*/
+$font-primary: 'Segoe UI', 'Inter', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+$font-monospace: 'Courier New', Courier, monospace;
+
+/*
+  * line-height
+*/
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+/*
+  * letter-spacing
+*/
+$letter-spacing-tight: -0.5px;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.5px;
+
+/*
+  * font-style
+*/
+$font-style-normal: normal;
+$font-style-italic: italic;
+
+/*
+  * text presets
+*/
+$text-h1: (
+  font-size: $size12,
+  font-weight: $bold,
+  line-height: $line-height-tight,
+  letter-spacing: $letter-spacing-tight,
+);
+
+$text-h2: (
+  font-size: $size10,
+  font-weight: $semi-bold,
+  line-height: $line-height-tight,
+  letter-spacing: $letter-spacing-normal,
+);
+
+$text-h3: (
+  font-size: $size08,
+  font-weight: $semi-bold,
+  line-height: $line-height-normal,
+  letter-spacing: $letter-spacing-normal,
+);
+
+$text-body: (
+  font-size: $size05,
+  font-weight: $normal,
+  line-height: $line-height-normal,
+  letter-spacing: $letter-spacing-normal,
+);
+
+$text-caption: (
+  font-size: $size03,
+  font-weight: $light,
+  line-height: $line-height-relaxed,
+  letter-spacing: $letter-spacing-wide,
+);
+
+@function text($preset, $key) {
+  @return map.get($preset, $key);
+}

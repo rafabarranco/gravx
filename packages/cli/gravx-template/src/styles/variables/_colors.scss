@@ -1,0 +1,20 @@
+$color-background: #05070d; // negro profundo espacial
+$color-surface: #0b0f1c; // capa intermedia, menos profunda
+$color-primary: #4a5bdc; // azul gravitacional tenue
+$color-secondary: #9b5de5; // púrpura interestelar
+$color-accent: #00e0ff; // cian ionizado brillante
+$color-border: #1c1f2a; // gris azulado opaco
+$color-muted: #5a5f72; // gris espacial neutro
+$color-text: #d4d7e5; // texto claro sobre fondo negro
+$color-heading: #ffffff; // encabezados en blanco puro
+
+$color-success: #16a34a; // verde equilibrado
+$color-error: #dc2626; // rojo denso
+$color-warning: #eab308; // amarillo gravedad
+$color-info: #2563eb; // azul profundo informativo
+
+@use 'sass:color';
+
+@function color-scale($color, $args...) {
+  @return color.scale($color, $args...);
+}
