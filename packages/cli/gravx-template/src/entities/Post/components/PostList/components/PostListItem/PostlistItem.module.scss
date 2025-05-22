@@ -1,8 +1,7 @@
 .PostListItem {
   padding: spacing(2);
   background-color: transparent;
-  color: $color-text;
-  font-family: $font-primary;
+  color: var(--color-text);
   font-size: text($text-body, font-size);
   font-weight: text($text-body, font-weight);
   letter-spacing: text($text-body, letter-spacing);

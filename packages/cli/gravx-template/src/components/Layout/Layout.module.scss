@@ -1,6 +1,6 @@
 .Layout {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  flex-direction: $flex-column;
+  height: $height-full-vh;
+  font-family: $font-primary;
 }

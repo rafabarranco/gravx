@@ -19,13 +19,18 @@ $height-xl: 1024px;
 
 // Anchuras y alturas porcentuales comunes
 $width-full: 100%;
+$width-full-vh: 100vh;
 $width-half: 50%;
+$width-half-vh: 50vh;
 $width-third: 33.3333%;
+$width-third-vh: 33.3333vh;
 $width-quarter: 25%;
-$width-none: 0;
+$width-quarter-vh: 25vh;
 
 $height-full: 100%;
+$height-full-vh: 100vh;
 $height-half: 50%;
+$height-half-vh: 50vh;
 
 // Max-width y max-height
 $max-width-container: 1200px;

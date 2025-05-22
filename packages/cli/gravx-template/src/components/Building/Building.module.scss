@@ -1,0 +1,15 @@
+.Building {
+  display: flex;
+  flex-grow: 1;
+  justify-content: $justify-center;
+  align-items: $items-center;
+  font-size: text($text-h3, font-size);
+  color: var(--color-heading);
+  text-align: center;
+  padding: spacing(6) spacing(4);
+  gap: spacing(16);
+}
+
+.BuildingMessage {
+  margin-top: spacing(4);
+}

@@ -4,26 +4,26 @@
   * size
 */
 $size00: 0;
-$size01: 4px;
-$size02: 8px;
-$size03: 12px;
-$size04: 16px;
-$size05: 20px;
-$size06: 24px;
-$size07: 28px;
-$size08: 32px;
-$size09: 36px;
-$size10: 40px;
-$size11: 44px;
-$size12: 48px;
-$size13: 52px;
-$size14: 56px;
-$size15: 60px;
-$size16: 64px;
-$size17: 68px;
-$size18: 72px;
-$size19: 76px;
-$size20: 80px;
+$size01: 2px;
+$size02: 4px;
+$size03: 6px;
+$size04: 8px;
+$size05: 10px;
+$size06: 12px;
+$size07: 14px;
+$size08: 16px;
+$size09: 18px;
+$size10: 20px;
+$size11: 22px;
+$size12: 24px;
+$size13: 26px;
+$size14: 28px;
+$size15: 30px;
+$size16: 32px;
+$size17: 34px;
+$size18: 36px;
+$size19: 38px;
+$size20: 40px;
 
 /*
   * weight
@@ -41,7 +41,8 @@ $black: 900;
 /*
   * font-family
 */
-$font-primary: 'Segoe UI', 'Inter', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+// $font-primary: 'Segoe UI', 'Inter', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+$font-primary: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Inter', Tahoma, Geneva, Verdana, sans-serif;
 $font-monospace: 'Courier New', Courier, monospace;
 
 /*
@@ -68,35 +69,49 @@ $font-style-italic: italic;
   * text presets
 */
 $text-h1: (
-  font-size: $size12,
+  font-size: $size20,
   font-weight: $bold,
   line-height: $line-height-tight,
   letter-spacing: $letter-spacing-tight,
 );
 
 $text-h2: (
-  font-size: $size10,
+  font-size: $size18,
   font-weight: $semi-bold,
   line-height: $line-height-tight,
   letter-spacing: $letter-spacing-normal,
 );
 
 $text-h3: (
-  font-size: $size08,
+  font-size: $size16,
   font-weight: $semi-bold,
   line-height: $line-height-normal,
   letter-spacing: $letter-spacing-normal,
 );
 
+$text-body-lg: (
+  font-size: $size11,
+  font-weight: $normal,
+  line-height: $line-height-normal,
+  letter-spacing: $letter-spacing-normal,
+);
+
 $text-body: (
-  font-size: $size05,
+  font-size: $size09,
+  font-weight: $normal,
+  line-height: $line-height-normal,
+  letter-spacing: $letter-spacing-normal,
+);
+
+$text-body-sm: (
+  font-size: $size07,
   font-weight: $normal,
   line-height: $line-height-normal,
   letter-spacing: $letter-spacing-normal,
 );
 
 $text-caption: (
-  font-size: $size03,
+  font-size: $size06,
   font-weight: $light,
   line-height: $line-height-relaxed,
   letter-spacing: $letter-spacing-wide,

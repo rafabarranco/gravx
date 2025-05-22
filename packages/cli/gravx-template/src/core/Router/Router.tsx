@@ -1,14 +1,20 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import Layout from '../../components/Layout/Layout';
+import Welcome from '../../components/Welcome/Welcome';
 
 import postRoutes from '../../entities/Post/routes';
+import Building from '../../components/Building/Building';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '',
     element: <Layout />,
-    children: [...postRoutes],
+    children: [
+      { index: true, element: <Welcome /> },
+      { path: 'docs', element: <Building /> },
+      ...postRoutes,
+    ],
   },
 ]);
 
