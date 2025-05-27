@@ -233,13 +233,99 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-xl) {
+  .Glass {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .Glass {
+    padding: spacing(5) spacing(3);
+  }
+
+  .Actions {
+    gap: spacing(3);
+  }
+
+  .Button,
+  .ButtonAlt {
+    padding: spacing(2) spacing(4);
+    font-size: $size07;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
   .Cards {
-    flex-direction: $flex-column;
-    align-items: $items-center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Glass {
+    padding: spacing(4);
+  }
+
+  .WelcomeCard {
+    align-items: center;
+  }
+
+  .Title {
+    font-size: text($text-body-lg, font-size);
+    text-align: center;
+  }
+
+  .Subtitle {
+    text-align: center;
+    font-size: text($text-body, font-size);
+  }
+
+  .CodeWrapper {
+    font-size: $size06;
+  }
+
+  .Code {
+    flex-direction: column;
+    align-items: center;
+    padding: spacing(2);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .Glass {
+    padding: spacing(3);
+  }
+
+  .Button,
+  .ButtonAlt {
+    padding: spacing(2) spacing(3);
+    font-size: $size06;
   }
 
   .Divider {
     display: none;
+  }
+}
+
+@media (max-width: $breakpoint-xs) {
+  .Glass {
+    padding: spacing(2);
+  }
+
+  .Title {
+    font-size: text($text-body, font-size);
+  }
+
+  .Subtitle {
+    font-size: text($text-caption, font-size);
+  }
+
+  .PricingInput,
+  .PricingButton {
+    font-size: text($text-caption, font-size);
+  }
+
+  .Code {
+    font-size: $size05;
+    gap: spacing(1);
   }
 }
